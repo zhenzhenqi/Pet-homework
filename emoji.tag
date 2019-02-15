@@ -1,4 +1,5 @@
 <emoji>
+  <h1>test</h1>
   <img src="img/{emoji}.gif">
 
   <div>
@@ -8,37 +9,40 @@
   <button onclick={ redpocket }>money</button>
   <button onclick={ candy }>no money</button>
 
-
   <script>
     //make a copy of my pet object and call it that
-    var that  = this;
+    var that = this;
 
     //initial state/propoerty
     this.redpocket = 50;
     this.emoji = "happy";
 
-
     decMoney() {
       <!-- js if statement shorthand -->
-      this.redpocket = this.redpocket - 10 < 0 ? 0 : this.redpocket - 10;
+
+      this.redpocket = this.redpocket - 10 < 0
+        ? 0
+        : this.redpocket - 10;
     }
 
     incMoney() {
       console.log(this.redpocket);
-      this.redpocket = this.repocket + 10 > 100 ? 100 : this.redpocket + 10;
+      this.redpocket = this.repocket + 10 > 100
+        ? 100
+        : this.redpocket + 10;
     }
 
     checkStatus() {
-      if (this.redpocket >= 70){
+      if (this.redpocket >= 70) {
         this.petImage = "angery";
-      } else if (this.redpocket <= 30){
+      } else if (this.redpocket <= 30) {
         this.petImage = "love";
-      }else{
+      } else {
         this.petImage = "happy";
       }
     }
 
-// functions that respond to events
+    // functions that respond to events
     money() {
       this.decMoney();
       this.checkStatus();
@@ -49,11 +53,9 @@
       this.checkStatus();
     }
 
-    //tell DOM window to increase hunger every three second
-    //console.log(that);
+    //tell DOM window to increase hunger every three second console.log(that);
 
-
-    window.setInterval(function(){
+    window.setInterval(function () {
       that.incMoney();
       console.log("wait");
       that.update();
@@ -62,18 +64,15 @@
   </script>
 
   <style>
-  /* styles that will be applied to the root level of my tag */
-  :scope{
-    margin:auto;
-  }
+    /* styles that will be applied to the root level of my tag */
+    :scope {
+      margin: auto;
+    }
 
-  img{
-    weight:auto;
-    height:200px;
-  }
-
+    img {
+      weight: auto;
+      height: 200px;
+    }
   </style>
-
-
 
 </emoji>
