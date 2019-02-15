@@ -1,6 +1,6 @@
 <emoji>
   <h1>test</h1>
-  <img src="img/{emoji}.gif">
+  <img src="image/{emoji}.gif">
 
   <div>
     <p>Happy New Year: { redpocket }</p>
